@@ -1,0 +1,128 @@
+.hero{
+  position: relative;
+  width: 100%;
+  height: 700px;
+  padding-top: 100px
+}
+.contact__link{
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; right: 50%;
+  transform: translate(50%, 400%);
+  cursor: pointer;
+}
+
+.contact__link::before{
+  position: absolute;
+  top: 0%; left: 0%;
+  transform: translateX(calc(50% - 15px)) translateY(10px);
+  content: '';
+  background-image: url('../../public/keyboard_double_arrow_down_FILL0_wght400_GRAD0_opsz48.svg');
+  background-repeat: no-repeat;
+  background-size: 30px ;
+  height: 100%;
+  width: 100%; 
+  transition: .5s;
+  
+}
+
+.contact__link__span{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid white;
+  transition: .5s;
+
+  
+}
+.contact__link:hover span{
+  animation: hoverRotate ease-in infinite 2s;
+}
+.contact__link:hover::before{
+  animation: blinkingIcon linear infinite 2s;
+}
+.contact__link__span:hover{
+  border: 1px solid #52ff0d66;
+  
+}
+
+
+.contact__link__span:hover::before{
+  height: 101%;
+  width: 101%;
+  border-radius: 45% 20% 30% 40%;
+  border: 1px solid #52ff0dbc;
+  position: absolute;
+  content: '';
+  animation: hoverRotate 2.5s infinite linear ;
+  animation-delay: .5s;
+
+}
+.contact__link__span:hover::after{
+  height: 101%;
+  width: 101%;
+  border-radius: 40% 70% 80% 55%;
+  border: 1px solid #51ff0d;
+  position: absolute;
+  content: '';
+  animation: hoverRotate 3s infinite linear;
+  animation-delay: 1s;
+  box-shadow: 0px 0px 40px #81ff50;
+}
+
+
+
+.h2{
+  font-size: 3em;
+  padding-top: 2.5em;
+  padding-left: 10rem;
+}
+
+.p{
+  font-size: 2em;
+  padding-left: 10rem;
+}
+
+@keyframes hoverRotate{
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    border-radius: 30% 20% 45% 50%;
+  }
+  50%{
+    border-radius: 30% 50% 20% 45%;
+  }
+  75%
+  {
+    border-radius: 50% 50% 20% 45%;
+  }
+  100%{
+    transform: rotate(365deg);
+  }
+}
+
+@keyframes blinkingIcon{
+  0%{
+
+    filter: invert(75%) sepia(91%) saturate(898%) hue-rotate(47deg) brightness(97%) contrast(140%) drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.4));
+  }
+  25%{
+    filter: invert(75%) sepia(91%) saturate(898%) hue-rotate(47deg) brightness(97%) contrast(120%) drop-shadow(0px 0px 3px rgba(7, 255, 53, 0.5));
+  
+  }
+  50%{
+
+    filter: invert(75%) sepia(91%) saturate(898%) hue-rotate(47deg) brightness(97%) contrast(110%) drop-shadow(0px 0px 4px rgba(7, 255, 53, 0.9));
+  }
+  75%{
+    filter: invert(75%) sepia(91%) saturate(898%) hue-rotate(47deg) brightness(130%) contrast(130%) drop-shadow(0px 0px 4px rgba(7, 255, 53, 0.5));
+  }
+  100%{
+    filter: invert(75%) sepia(91%) saturate(898%) hue-rotate(47deg) brightness(150%) contrast(150%) drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.4));
+  }
+}
