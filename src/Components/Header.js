@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import classes from "./Headers.module.css";
 
 const Header = (props) => {
+	
 	const [menuState, setMenuState]  = useState(false)
 
 	useEffect(() => {
@@ -9,14 +10,12 @@ const Header = (props) => {
 			if(window.innerWidth > 600){
 				setMenuState(false)
 			} 
-	
 		}
 		window.addEventListener('resize', handleResize)
 
 		return _ => {
       window.removeEventListener('resize', handleResize)
 		}
-	
 	})
 
 	

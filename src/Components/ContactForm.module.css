@@ -1,0 +1,139 @@
+.form__div{
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  background-color: #121212;
+}
+
+.form__info{
+  height: 100%;
+  width: 100%;
+  flex-basis: 1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+
+}
+
+.form__info__h2{
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+.form__info__h3{
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.form__info__p{
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.form__info__a{
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  margin-top: 30px;
+  color: white;
+}
+.form{
+  height: 100%;
+  width: 100%;
+  flex-basis: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+}
+label{
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  width: 80%;
+  margin: 5px;
+  color: white;
+}
+input{
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  color: white;
+  width: 80%;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  background-color: #121212;
+  border: 5px inset #1f1b24;
+
+}
+textarea{
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  width: 80%;
+  height: 100px;
+  border-radius: 5px;
+  resize: none;
+  background-color: transparent;
+  background-color: #121212;
+  border: 5px inset #1f1b24;
+}
+
+.form__button{
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin-top: 20px;
+  color: white;
+  z-index: 1;
+  cursor: pointer;
+  background: black;
+  border-radius: 12px;
+}
+.form__button::before{
+  position: absolute;
+  content: '';
+  height: 50px;
+  width: 100px;
+  top: 0;
+  left: 0;
+  background-color: #1f1b24;
+  z-index: -1;
+  border-radius: 5px;
+  
+}
+
+.form__button::after{
+  position: absolute;
+  content: '';
+  height: 55px;
+  width: 105px;
+  top: -2.5px;
+  left: -2.5px;
+ 
+  z-index: -2;
+  border-radius: 5px;
+  animation: rotateColor 1s infinite linear;
+  
+}
+
+@keyframes rotateColor{
+  0%{
+    background-image: linear-gradient(0deg, #7c00ff, #a800f9, #ca00f3, #e600ed, #ff00e7);
+  }
+  25%{
+    background-image: linear-gradient(90deg, #7c00ff, #a800f9, #ca00f3, #e600ed, #ff00e7);
+  }
+  50%{
+    background-image: linear-gradient(180deg,#7c00ff, #a800f9, #ca00f3, #e600ed, #ff00e7);
+  }
+  75%{
+    background-image: linear-gradient(270deg, #7c00ff, #a800f9, #ca00f3, #e600ed, #ff00e7);
+  }
+  100%{
+    background-image: linear-gradient(360deg, #7c00ff, #a800f9, #ca00f3, #e600ed, #ff00e7);
+  }
+}
