@@ -8,9 +8,7 @@ const Header = (props) => {
 		function handleResize(){
 			if(window.innerWidth > 600){
 				setMenuState(false)
-			} else{
-				setMenuState(true)
-			}
+			} 
 	
 		}
 		window.addEventListener('resize', handleResize)
@@ -44,9 +42,9 @@ const Header = (props) => {
 				</li>
 			</ul>
 			<div className={classes.header__content__mobile} onClick={menuHandler}>
-				<span className={menuState ? classes.header__content__mobile__span : classes.header__content__mobile__span__active} ></span>
-				<span className={menuState ? classes.header__content__mobile__span : classes.header__content__mobile__span__active}></span>
-				<span className={menuState ? classes.header__content__mobile__span : classes.header__content__mobile__span__active}></span>
+				<span className={!menuState ? classes.header__content__mobile__span : classes.header__content__mobile__span__active} ></span>
+				<span className={!menuState ? classes.header__content__mobile__span : classes.header__content__mobile__span__active}></span>
+				<span className={!menuState ? classes.header__content__mobile__span : classes.header__content__mobile__span__active}></span>
 			</div>
 		</header>
 	);
