@@ -7,6 +7,9 @@
   padding: 0px;
   font-size: 20px;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 body{
   background-color: #f5f5f5;

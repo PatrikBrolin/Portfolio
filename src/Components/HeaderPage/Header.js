@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import classes from "./Headers.module.css";
 
 const Header = (props) => {
+
+	console.log(props.click)
 	
 	const [menuState, setMenuState]  = useState(false)
 
@@ -27,17 +29,17 @@ const Header = (props) => {
 	return (
 		<header className={classes.header}>
 			<ul className={!menuState ? classes.ul : classes.ul__active}>
-				<li className={classes.li}>
-				<a href="/">Hem</a>
+				<li className={classes.li} onClick={props.homeClick}>
+					Hem
 				</li>
-				<li className={classes.li}>
-				<a href="/">Om mig</a>
+				<li className={classes.li} onClick={props.aboutClick}>
+					Om mig
 				</li>
-				<li className={classes.li}>
-				<a href="/">Projekt</a>
+				<li className={classes.li} onClick={props.projectsClick}>
+			Projekt
 				</li>
-				<li className={classes.li}>
-					<a href="/">Kontakt</a>
+				<li className={classes.li} onClick={props.contactFormClick}>
+					Kontakt
 				</li>
 			</ul>
 			<div className={classes.header__content__mobile} onClick={menuHandler}>

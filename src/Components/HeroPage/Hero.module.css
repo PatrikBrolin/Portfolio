@@ -46,7 +46,7 @@
   top: 0%; left: 0%;
   transform: translateX(calc(50% - 15px)) translateY(10px);
   content: '';
-  background-image: url('../../public/keyboard_double_arrow_down_FILL0_wght400_GRAD0_opsz48.svg');
+  background-image: url('../../../public/keyboard_double_arrow_down_FILL0_wght400_GRAD0_opsz48.svg');
   background-repeat: no-repeat;
   background-size: 30px ;
   height: 100%;
