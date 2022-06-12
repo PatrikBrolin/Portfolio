@@ -1,12 +1,14 @@
 .form__div{
-  height: 60vh;
+  height: min-content;
+  padding: 50px 0px;
   width: 100%;
   display: flex;
   background-color: #121212;
+
 }
 
 .form__info{
-  height: 100%;
+  
   width: 100%;
   flex-basis: 1;
   color: white;
@@ -135,5 +137,11 @@ textarea{
   }
   100%{
     background-image: linear-gradient(360deg, #7c00ff, #a800f9, #ca00f3, #e600ed, #ff00e7);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .form__div{
+    flex-direction: column;
   }
 }
