@@ -53,7 +53,7 @@ const ContactForm = (props) => {
 				<input
 					type="text"
 					name="from_name"
-					placeholder="from name"
+					placeholder="Ditt namn"
 					value={toSend.from_name}
 					onChange={handleChange}
 				></input>
@@ -61,7 +61,7 @@ const ContactForm = (props) => {
 				<input
 					type="email"
 					name="reply_to"
-					placeholder="Your email"
+					placeholder="Din mail"
 					value={toSend.reply_to}
 					onChange={handleChange}
 				></input>
@@ -69,7 +69,7 @@ const ContactForm = (props) => {
 				<textarea
 					id="contact__textarea"
 					name="message"
-					placeholder="Your message"
+					placeholder="Ditt meddelande"
 					value={toSend.message}
 					onChange={handleChange}
 				></textarea>

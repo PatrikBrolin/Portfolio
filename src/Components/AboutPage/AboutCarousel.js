@@ -29,9 +29,9 @@ const AboutCarousel = () => {
       draggable={true}
       infinite={true}>
     
-				<div>hej</div>
-				<div>mitt</div>
-				<div>namn</div>
+				<div></div>
+				<div></div>
+				<div></div>
 			</Carousel>
 		</div>
 	);
