@@ -1,0 +1,20 @@
+.carousel-container{
+  width: 80%;
+  height: 600px;
+  background-color: green;
+  margin: auto;
+  z-index: 90;
+}
+
+.carousel-item{
+
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+}
+
+.carousel__wrapper{
+  margin-top: 50px;
+}

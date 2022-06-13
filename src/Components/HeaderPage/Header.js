@@ -2,8 +2,6 @@ import React, {useState, useEffect} from "react";
 import classes from "./Headers.module.css";
 
 const Header = (props) => {
-
-	console.log(props.click)
 	
 	const [menuState, setMenuState]  = useState(false)
 

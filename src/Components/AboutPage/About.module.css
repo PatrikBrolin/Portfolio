@@ -1,3 +1,7 @@
 .about__div{
-  height: 100vh;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
 }

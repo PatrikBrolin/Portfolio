@@ -84,7 +84,7 @@
   border: 1px solid #52ff0dbc;
   position: absolute;
   content: '';
-  animation: hoverRotate 2.5s infinite linear ;
+  animation: hoverRotate 2.5s linear infinite;
   animation-direction: reverse;
   animation-delay: .5s;
   transform: skew(14deg) rotate(44deg);
@@ -97,7 +97,7 @@
   border: 1px solid #51ff0d;
   position: absolute;
   content: '';
-  animation: hoverRotate 3s infinite linear;
+  animation: hoverRotate 3s linear infinite;
   animation-delay: 1s;
   box-shadow: 0px 0px 40px #81ff50;
   transform: skew(-14deg) rotate(-44deg);
