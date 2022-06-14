@@ -21,6 +21,7 @@ const AboutCarousel = () => {
 	};
 	return (
 		<div className="carousel__wrapper">
+			Vem är jag?
 			<Carousel
 				responsive={responsive}
 				containerClass="carousel-container"
@@ -32,8 +33,8 @@ const AboutCarousel = () => {
 				infinite={true}
 			>
 				<Intresses />
-				<div>På</div>
-				<div>Dig</div>
+				<div></div>
+				<div></div>
 			</Carousel>
 		</div>
 	);

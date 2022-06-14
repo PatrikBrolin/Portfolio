@@ -1,0 +1,63 @@
+.intresses__wrapper{
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../images/Profilbild.jpeg');
+  background-size:     cover; 
+  background-repeat:   no-repeat;
+  background-position: center; 
+  filter:grayscale(70%);
+}
+.intresses__wrapper::before{
+ position: absolute;
+ content: '';
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background-color: black;
+  opacity: 50%;
+}
+.position__div{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-basis: 1;
+}
+.intresses__p{
+  padding: 20%;
+  color: white;
+    font-size: 20px;
+    text-shadow:
+    0.05em 0 black,
+    0 0.05em black,
+    -0.05em 0 black,
+    0 -0.05em black,
+    -0.05em -0.05em black,
+    -0.05em 0.05em black,
+    0.05em -0.05em black,
+    0.05em 0.05em black;
+}
+
+/* .image{
+  height: 50%;
+  width: 50%;
+
+  background-image: url('../../images/Profilbild.jpeg');
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center;  
+} */
+
+
+@media only screen and (max-width: 1200px){
+  .intresses__wrapper{
+    flex-direction: column;
+  }
+}

@@ -1,10 +1,15 @@
 import React from 'react'
-import './Intresses.css'
-import image from './Profilbild-jpeg'
+import classes from './Intresses.module.css';
+
 const Intresses = () =>{
   return(
-    <div className='intresses__wrapper'>
-      <img src={""}/>
+    <div className={classes.intresses__wrapper}>
+      <div className={classes.position__div}>
+        <p className={classes.intresses__p}>Jag har ett stort intresse för fotboll och träning</p>
+      </div>
+      <div className={classes.position__div}>
+          <div className={classes.image}></div>
+      </div>
     </div>
   );
 }
