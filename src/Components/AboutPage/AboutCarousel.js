@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./AboutCarousel.css";
+import Intresses from './Intresses'
 
 const AboutCarousel = () => {
 	const responsive = {
@@ -20,18 +21,19 @@ const AboutCarousel = () => {
 	};
 	return (
 		<div className="carousel__wrapper">
-			<Carousel responsive={responsive}
-      containerClass="carousel-container"
-      itemClass="carousel-item"
-      autoPlay={false}
-      autoPlaySpeed={10000}
-      swipeable={true}
-      draggable={true}
-      infinite={true}>
-    
-				<div></div>
-				<div></div>
-				<div></div>
+			<Carousel
+				responsive={responsive}
+				containerClass="carousel-container"
+				itemClass="carousel-item"
+				autoPlay={false}
+				autoPlaySpeed={10000}
+				swipeable={true}
+				draggable={true}
+				infinite={true}
+			>
+				<Intresses />
+				<div>På</div>
+				<div>Dig</div>
 			</Carousel>
 		</div>
 	);
