@@ -1,7 +1,12 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.29345ebe.css",
-    "main.js": "/Portfolio/static/js/main.4ecdfd91.js",
+    "main.css": "/Portfolio/static/css/main.6a626b91.css",
+    "main.js": "/Portfolio/static/js/main.f828da4a.js",
+    "static/media/PaltByrå.png": "/Portfolio/static/media/PaltByrå.e20dcf9a92905fc03661.png",
+    "static/media/Bookduck.png": "/Portfolio/static/media/Bookduck.5fae36141870a63b5ab8.png",
+    "static/media/t-paita.png": "/Portfolio/static/media/t-paita.8fda831a5246eebbf6ae.png",
+    "static/media/Banken.png": "/Portfolio/static/media/Banken.bf89d62611f5edb05a12.png",
+    "static/media/Education.avif": "/Portfolio/static/media/Education.0d1d350b6c70ad8f3a7b.avif",
     "static/media/Profilbild.jpeg": "/Portfolio/static/media/Profilbild.6bcc406d17ebc29e2b2d.jpeg",
     "static/media/revicons.eot": "/Portfolio/static/media/revicons.a77de540a38981833f9e.eot",
     "static/media/revicons.ttf": "/Portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
@@ -9,11 +14,11 @@
     "index.html": "/Portfolio/index.html",
     "static/media/keyboard_double_arrow_down_FILL0_wght400_GRAD0_opsz48.svg": "/Portfolio/static/media/keyboard_double_arrow_down_FILL0_wght400_GRAD0_opsz48.336422972b5bad2fa31d.svg",
     "static/media/expand_more_FILL0_wght300_GRAD200_opsz48.svg": "/Portfolio/static/media/expand_more_FILL0_wght300_GRAD200_opsz48.b2605787de6438c4dc6b.svg",
-    "main.29345ebe.css.map": "/Portfolio/static/css/main.29345ebe.css.map",
-    "main.4ecdfd91.js.map": "/Portfolio/static/js/main.4ecdfd91.js.map"
+    "main.6a626b91.css.map": "/Portfolio/static/css/main.6a626b91.css.map",
+    "main.f828da4a.js.map": "/Portfolio/static/js/main.f828da4a.js.map"
   },
   "entrypoints": [
-    "static/css/main.29345ebe.css",
-    "static/js/main.4ecdfd91.js"
+    "static/css/main.6a626b91.css",
+    "static/js/main.f828da4a.js"
   ]
 }
