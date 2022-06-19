@@ -3,6 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./AboutCarousel.css";
 import Intresses from './Intresses'
+import Education from './Education'
 
 const AboutCarousel = () => {
 	const responsive = {
@@ -33,7 +34,7 @@ const AboutCarousel = () => {
 				infinite={true}
 			>
 				<Intresses />
-				<div></div>
+				<Education />
 				<div></div>
 			</Carousel>
 		</div>
