@@ -1,5 +1,11 @@
 .Projects{
-  height: 100vh;
+  height: 60vh;
+  background-color: green;
+  padding: 50px 10px;
+  margin: auto;
+  display: flex;
+  background-color: #EEEAE3;
+
 }
 .projects__wrapper{
   position: relative;
@@ -9,72 +15,133 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 20px
-
+  grid-gap: 20px;
 }
 
+a{
+  box-shadow: 0px 4px 8px #a7a49f;
+}
 .project__t_paita{
+  position: relative;
   grid-column: 1 /span 2;
   grid-row: 1 /span 2;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.project__t_paita__img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background: url('../../../src/images/t-paita.png');
   background-size:     cover; 
   background-repeat:   no-repeat;
-  background-position: center; 
-  cursor: pointer;
+  background-position: center;  
+  z-index: -1;  
 }
 
 .project__banken{
+  position: relative;
   grid-column: 3;
   grid-row: 1 /span 3;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.project__banken__img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background: url('../../../src/images/Banken.png');
   background-size:   cover; 
-
   background-repeat:   no-repeat;
   background-position: top; 
-
-  cursor: pointer;
+  z-index: -1;  
 }
 
 .project__bookduck{
+  position: relative;
   grid-column: 1;
   grid-row: 3 /span 1;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.project__bookduck__img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background: url('../../../src/images/Bookduck.png');
   background-size:   cover; 
-
   background-repeat:   no-repeat;
   background-position: top; 
-
-  cursor: pointer;
+  z-index: -1;
 }
 
 .project__paltbyrå{
+  position: relative;
   grid-column: 2;
   grid-row: 3 /span 1;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.project__paltbyrå__img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background: url('../../../src/images/PaltByrå.png');
   background-size:   cover; 
   background-repeat:   no-repeat;
   background-position: top; 
-
-  cursor: pointer;
+  z-index: -1;
 }
 
 
-a{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-a::before{
-  content: '';
-  height: 100%;
-  width: 100%;
-  transition: -0.5s;
-  border: 0px solid rgba(0,0,0,0.2);
+
+a:hover .project__t_paita__img{
+  height: 110%;
+  width: 110%;
+  top: -5%;
+  left: -5%;
+  transition: .5s;
+ 
 }
 
-a:hover::before{
-  border: 20px solid rgba(0,0,0,0.2);
+a:hover .project__banken__img{
+  height: 110%;
+  width: 110%;
+  top: -5%;
+  left: -5%;
+  transition: .5s;
+}
+a:hover .project__bookduck__img{
+  height: 110%;
+  width: 110%;
+  top: -5%;
+  left: -5%;
+  transition: .5s;
+}
+a:hover .project__paltbyrå__img{
+  height: 110%;
+  width: 110%;
+  top: -5%;
+  left: -5%;
   transition: .5s;
 }
 
