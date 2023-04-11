@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.dotPattern {
+  background-image: radial-gradient(#7562e0, transparent 9%);
+  background-position: 0% 0%;
+  background-size: 4vmin 4vmin;
+  width: 20%;
+  aspect-ratio: 1/1;
+  right: 20%;
+  position: absolute;
+  top: 0px;
+  transition: opacity 800ms ease, background-size 800ms ease,
+    background-position 800ms ease;
+  z-index: 1;
+  min-width: 300px;
+}
+.textContent {
+
+  position: relative;
+  width: 50%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 0 0 10%;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    padding: 0 0 0 20px;
+
+  }
+  .title {
+    font-family: $mainFont;
+    font-size: 72px;
+    margin: 0;
+    width: 80%;
+    color: #120945;
+    white-space: nowrap;
+  }
+  .paragraph {
+    color: #120945;
+    font-family: $mainFont;
+    font-size: 18px;
+    width: 80%;
+    text-align: start;
+    line-height: 30px;
+  }
+  .buttonContainer {
+    position: relative;
+    height: 50px;
+    width: 150px;
+  }
+}
+

@@ -1,0 +1,352 @@
+@import "./styles/variables";
+.container {
+  position: relative;
+  padding: 0%;
+  height:min-content;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 200px);
+margin: auto;
+  grid-gap: 40px;
+  z-index: 1;
+
+  @media screen and (max-width: 800px) {
+    width: 90%;
+    padding: 0 0%;
+
+    display: flex;
+    flex-direction: column;
+
+    .partna{
+      aspect-ratio: 2/1;
+      @media screen and (max-width: 500px) {
+        aspect-ratio: 1/1;
+      }
+    } 
+    .eWallet{
+      aspect-ratio: 2/1;
+      @media screen and (max-width: 500px) {
+        aspect-ratio: 1/1;
+      }
+    }
+    .tPaita{
+      aspect-ratio: 2/1;
+      @media screen and (max-width: 500px) {
+        aspect-ratio: 1/1;
+      }
+    }
+    .bookDuck{
+      aspect-ratio: 2/1;
+      @media screen and (max-width: 500px) {
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+  .partna {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+
+    background: linear-gradient(to top, $textColor, #1b315389),
+      url("../../public/images/project-images/partna.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateX(-150%);
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px black;
+    border: 2px solid white;
+    overflow: hidden;
+    border-radius: 12px;
+    .projectDescription {
+      position: absolute;
+      top: 0;
+      width: 0;
+      background-color: rgba(20, 20, 20, 0.8);
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      margin: 0;
+      border: none;
+      color: #fff;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p {
+        max-width: 60%;
+        text-align: center;
+      }
+      .buttonContainer {
+        margin-top: 20px;
+        position: relative;
+        height: 40px;
+        width: 150px;
+        color: #fff;
+      }
+    }
+    &.visible {
+      animation: partnaVisbile 0.5s linear;
+      transform: translateX(0%);
+      @media screen  and (max-width: 800px){
+        animation: partnaVisbile 0.5s linear;
+      }
+    }
+
+    &:hover {
+      background: linear-gradient(to top, $textColor, #1b31532a),
+        url("../../public/images/project-images/partna.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .eWallet {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 3;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(to top, $textColor, #1b315389),
+      url("../../public/images/project-images/e-wallet.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateX(-150%);
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px black;
+    border: 2px solid white;
+    overflow: hidden;
+    border-radius: 12px;
+    .projectDescription {
+      position: absolute;
+      top: 0;
+      width: 0;
+      background-color: rgba(20, 20, 20, 0.8);
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      margin: 0;
+      border: none;
+      color: #fff;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        max-width: 60%;
+        text-align: center;
+      }
+      .buttonContainer {
+        margin-top: 20px;
+        position: relative;
+        height: 40px;
+        width: 150px;
+        color: #fff;
+      }
+    }
+    &.visible {
+      animation: eWalletVisbile 0.7s linear;
+      animation-delay: 1.5s;
+      transform: translateX(-150%);
+      animation-fill-mode: forwards;
+      @media screen  and (max-width: 800px){
+        transform: translateX(0%);
+        animation: partnaVisbile 1s linear;
+      
+      }
+    }
+    &:hover {
+      background: linear-gradient(to top, $textColor, #1b31532a),
+        url("../../public/images/project-images/e-wallet.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .tPaita {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 3;
+
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(to top, $textColor, #1b31535b),
+      url("../../public/images/project-images/t-paita.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateX(150%);
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px black;
+    border: 2px solid white;
+    overflow: hidden;
+    border-radius: 12px;
+    .projectDescription {
+      position: absolute;
+      top: 0;
+      width: 0;
+      background-color: rgba(20, 20, 20, 0.8);
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      margin: 0;
+      border: none;
+      color: #fff;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p {
+        max-width: 60%;
+        text-align: center;
+      }
+      .buttonContainer {
+        margin-top: 20px;
+        position: relative;
+        height: 40px;
+        width: 150px;
+        color: #fff;
+      }
+    }
+    &.visible {
+      animation: tPaitaVisbile 0.7s linear;
+      animation-delay: 0.5s;
+      transform: translateX(150%);
+      animation-fill-mode: forwards;
+      @media screen  and (max-width: 800px){
+        animation: partnaVisbile 1.5s linear;
+        transform: translateX(0%);
+        
+      }
+    }
+    &:hover {
+      background: linear-gradient(to top, $textColor, #1b31532a),
+        url("../../public/images/project-images/t-paita.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .bookDuck {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 2;
+
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(to top, $textColor, #1b315389),
+      url("../../public/images/project-images/bookduck.png");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    transform: translateX(-250%);
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px black;
+    border: 2px solid white;
+    overflow: hidden;
+    border-radius: 12px;
+    .projectDescription {
+      position: absolute;
+      top: 0;
+      width: 0;
+      background-color: rgba(20, 20, 20, 0.8);
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      margin: 0;
+      border: none;
+      color: #fff;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      p {
+        max-width: 60%;
+        text-align: center;
+      }
+      .buttonContainer {
+        margin-top: 20px;
+        position: relative;
+        height: 40px;
+        width: 150px;
+        color: #fff;
+      }
+    }
+    &.visible {
+      animation: bookDuckVisbile 0.7s linear;
+      transform: translateX(-2000px);
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+      @media screen  and (max-width: 800px){
+        animation: partnaVisbile 2s linear;
+        transform: translateX(0%);
+       
+      }
+    }
+    &:hover {
+      background: linear-gradient(to top, $textColor, #1b31532a),
+        url("../../public/images/project-images/bookduck.png");
+      background-size: cover;
+      background-position: left;
+      background-repeat: no-repeat;
+    }
+  }
+  .pattern {
+    position: absolute;
+    height: 120%;
+    width: 65%;
+    background-color: $accentColor;
+    right: 0;
+    transform: translateY(-200px);
+    z-index: -1;
+    margin-right: -15%;
+    border-top-left-radius: 99px ;
+    border-bottom-left-radius:99px ;
+   
+  }
+}
+
+
+
+@keyframes partnaVisbile {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes eWalletVisbile {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes tPaitaVisbile {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes bookDuckVisbile {
+  0% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
