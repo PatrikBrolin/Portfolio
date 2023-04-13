@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import Section from "../layout/ui/section/section";
 import MapChart from "../layout/ui/map/map";
@@ -8,7 +8,9 @@ import Snackbar from "../utilities/snackbar/Snackbar";
 import styles from "./contact.module.scss";
 import { ValidateEmail } from "@/lib/helpFunctions";
 
-export default function Contact({contactRef}) {
+import DarkButton from "../layout/design/Button/DarkButton";
+
+export default function Contact({ contactRef }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -78,48 +80,40 @@ export default function Contact({contactRef}) {
   return (
     <Section>
       <div className={styles.contactWrapper} ref={contactRef}>
-        <div className={styles.left}>
-          <div className={styles.formWrapper}>
-            <h2>Contact me</h2>
-            <form onSubmit={handleSubmit}>
-              <div className={styles.inputGroup}>
-                {/* <label htmlFor="name">Name</label> */}
-                <input
-                placeholder="Name"
-                  type="text"
-                  id="name"
-                  name="name"
-                  onChange={handleInputChange}
-                />
-              </div>
-
-              <div className={styles.inputGroup}>
-                {/* <label htmlFor="email">Email</label> */}
-                <input
-                placeholder="Email"
-                  type="text"
-                  id="email"
-                  name="email"
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className={styles.inputGroup}>
-                {/* <label htmlFor="message">Write your message</label> */}
-                <textarea
-                placeholder="Write your message"
-                  type="text"
-                  id="message"
-                  name="message"
-                  onChange={handleInputChange}
-                />
-              </div>
-
-              <button type="submit">Send</button>
-            </form>
-          </div>
+        <div className={styles.textContent}>
+          <h2>Send me a message! <a  href="mailto:patrkbrolin@hotmail.com" ><img src="./icons/arrow.png"/></a> </h2>
+          <p>Got a question or proposal, or just want to say hello? shoot!</p>
         </div>
-        <div className={styles.right}>
-          <MapChart />
+        <div className={styles.contactForm}>
+          <form onSubmit={handleSubmit}>
+            <section>
+            <div>
+              <div className={styles.name}>
+                <label>Your name</label>
+                <input placeholder="Enter your name" name="name" onChange={(e) => {
+                  handleInputChange(e)
+                }}></input>
+              </div>
+              <div className={styles.name}>
+                <label>Your email</label>
+                <input placeholder="Enter your email" name="email" onChange={(e) => {
+                  handleInputChange(e)
+                }}></input>
+              </div>
+            </div>
+            <div>
+              <div className={styles.message}>
+                <label>Your message</label>
+                <textarea placeholder="Enter your message" name="message" onChange={(e) => {
+                  handleInputChange(e)
+                }}></textarea>
+              </div>
+            </div>
+            </section>
+            <div className={styles.buttonContainer}>
+           <button>Shoot <img src="./icons/arrow.gif"/></button>
+            </div>
+          </form>
         </div>
       </div>
       {snackBarOptions?.text && (

@@ -4,9 +4,11 @@ import Header from "@/components/header/Header";
 import Container from "@/components/layout/ui/container/container";
 import Skills from "@/components/skills/Skills";
 import About from "@/components/about/about";
+import Links from "@/components/layout/ui/links/Links";
 
 import Projects from "@/components/projects/Projects";
 import { useState, useEffect, useRef } from "react";
+import Email from "@/components/layout/ui/email/Email";
 export default function Home({}) {
   const [isVisible, setIsVisible] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,7 +51,7 @@ export default function Home({}) {
   }, []);
 
   return (
-    <>
+    <Container>
       <Header
         scrolled={isScrolled}
         projectsRef={projectsRef}
@@ -64,6 +66,8 @@ export default function Home({}) {
       <Skills />
       {/* <About /> */}
       <Contact contactRef={contactRef} />
-    </>
+      <Links />
+      <Email />
+    </Container>
   );
 }

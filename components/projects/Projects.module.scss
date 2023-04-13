@@ -3,7 +3,7 @@
   position: relative;
   padding: 0%;
   height:min-content;
-  width: 80%;
+  width: 70%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 200px);
@@ -306,7 +306,7 @@ margin: auto;
     right: 0;
     transform: translateY(-200px);
     z-index: -1;
-    margin-right: -15%;
+    margin-right: -25%;
     border-top-left-radius: 99px ;
     border-bottom-left-radius:99px ;
    
