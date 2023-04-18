@@ -8,7 +8,7 @@ export default function Hero({contactRef, heroRef}) {
     contactRef.current.scrollIntoView({ behavior: 'smooth' })
   }
   return (
-    <Section>
+    <Section >
       <div className={styles.dotPattern}></div>
       <div className={styles.textContent} ref={heroRef}>
         <h2 className={styles.title}>Patrik Brolin</h2>

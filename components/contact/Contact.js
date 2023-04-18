@@ -9,8 +9,10 @@ import styles from "./contact.module.scss";
 import { ValidateEmail } from "@/lib/helpFunctions";
 
 import DarkButton from "../layout/design/Button/DarkButton";
+import cn from 'classnames'
 
 export default function Contact({ contactRef }) {
+  const[loading, setLoading] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -39,6 +41,7 @@ export default function Contact({ contactRef }) {
     const validateEmail = ValidateEmail(formData?.email);
     const validateMessage = formData?.message.trim().length > 0;
     if (validateName && validateEmail && validateMessage) {
+      setLoading(true)
       emailjs
         .send(
           process.env.NEXT_PUBLIC_SERVICEID,
@@ -47,7 +50,9 @@ export default function Contact({ contactRef }) {
           process.env.NEXT_PUBLIC_PUBLICKEY
         )
         .then(
+          
           (result) => {
+            setLoading(false)
             showSnackBar({
               status: "success",
               text: "Thank you for reaching out. Your email has been received and I will respond soon.",
@@ -55,6 +60,7 @@ export default function Contact({ contactRef }) {
             });
           },
           (error) => {
+            setLoading(false)
             showSnackBar({
               status: "error",
               text: "Sorry, your email could not be sent.",
@@ -78,7 +84,7 @@ export default function Contact({ contactRef }) {
   };
 
   return (
-    <Section>
+    <Section heading={"Contact"}>
       <div className={styles.contactWrapper} ref={contactRef}>
         <div className={styles.textContent}>
           <h2>Send me a message! <a  href="mailto:patrkbrolin@hotmail.com" ><img src="./icons/arrow.png"/></a> </h2>
@@ -110,8 +116,8 @@ export default function Contact({ contactRef }) {
               </div>
             </div>
             </section>
-            <div className={styles.buttonContainer}>
-           <button>Shoot <img src="./icons/arrow.gif"/></button>
+            <div className={cn(styles.buttonContainer, loading && styles.loading)}>
+           <button  className={ loading && styles.loading}>Shoot <img src="./icons/arrow.gif"/></button>
             </div>
           </form>
         </div>

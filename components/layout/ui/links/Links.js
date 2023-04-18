@@ -5,6 +5,7 @@ import LinkedIn from "@/assets/logos/LinkedIn";
 import { useRouter } from "next/router";
 
 const handleClick = (url) => {
+  console.log('test')
   window.open(url, "_blank");
 };
 export default function Links() {
@@ -18,7 +19,7 @@ export default function Links() {
           }}
         />
         <LinkedIn size={"25px"}   click={() => {
-            handleClick("https://www.linkedin.com/in/patrik-brolin/");
+            handleClick("https://www.linkedin.com/in/patrik-brolin");
           }}/>
       </div>
       <div className={styles.line}></div>

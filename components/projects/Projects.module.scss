@@ -11,6 +11,7 @@ margin: auto;
   grid-gap: 40px;
   z-index: 1;
 
+
   @media screen and (max-width: 800px) {
     width: 90%;
     padding: 0 0%;
@@ -308,8 +309,15 @@ margin: auto;
     z-index: -1;
     margin-right: -25%;
     border-top-left-radius: 99px ;
-    border-bottom-left-radius:99px ;
-   
+  
+   &::after{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    content: "";
+    top: 0;
+    left: 0;
+   }
   }
 }
 

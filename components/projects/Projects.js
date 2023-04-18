@@ -17,7 +17,7 @@ export default function Projects({ isVisible }) {
     window.open(url, "_blank");
   };
   return (
-    <Section>
+    <Section heading={"Projects"}>
       <div className={styles.container}>
         <div className={styles.pattern}></div>
         <div

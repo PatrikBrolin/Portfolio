@@ -1,22 +1,118 @@
 @import "../../styles/variables";
 
-.skillsContainer{
-    margin-top: 50px;
-height: 100vh;
-background-color: #7562e0;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-h2{
-    color: white;
-    font-family: $mainFont;
-    margin-bottom: 50px;
-}
-.frontendContainer{
-    h3{
-        color: white;
-        font-family: $mainFont;
+.skillsContainer {
+
+  height: 100vh;
+  background-color: #7562e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+width: 100%;
+  .choose {
+ 
+    background-color: white;
+    height: 55px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 100px;
+    width: 35%;
+    border-radius: 30px;
+    padding: 0 2%;
+    box-sizing: border-box;
+    @media screen and (max-width: 1200px) {
+        width: 50%;
     }
-}
+    @media screen and (max-width:800px) {
+        width: 80%;
+    }
+    @media screen and (max-width:500px) {
+        width: 90%;
+    }
+    ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      width: 100%;
+      padding: 0;
+
+      li {
+        cursor: pointer;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75px;
+        width: 75px;
+        border-radius: 50%;
+        font-family: $mainFont;
+        &.active {
+          position: relative;
+          transform: translateY(-40px);
+          background-color: white;
+          height: 75px;
+          width: 75px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          transition: .3s;
+          &::before {
+            position: absolute;
+      
+            background-color: white;
+            height: 75px;
+            width: 75px;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: "";
+            z-index: 0;
+            background-color: transparent;
+            border: 8px solid $accentColor;
+          }
+        }
+      }
+    }
+  }
+  .sliderContainer {
+    width: 80%;
+    // height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+
+    & > * {
+      transition: 0.3s;
+  
+      position: relative;
+
+      height: 100%;
+     display: flex;
+     justify-content:flex-start;
+      grid-gap: 10px;
+      opacity: 0.5;
+      transform: scale(0.9);
+
+      // padding: 2%;
+      width: 100%;
+      flex-wrap: wrap;
+      & > * {
+
+  flex-basis: 22%;
+  margin-bottom: 50px;
+      }
+    }
+    .active {
+  
+      opacity: 1;
+  
+ 
+    }
+  }
 }

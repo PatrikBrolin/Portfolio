@@ -1,5 +1,5 @@
 import { useState } from "react";
-const LinkedIn = ({ size }) => {
+const LinkedIn = ({ size, click }) => {
   const [realColor, setRealColor] = useState(false);
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -24,6 +24,7 @@ const LinkedIn = ({ size }) => {
       onMouseEnter={() => setRealColor(true)}
       onMouseLeave={() => setRealColor(false)}
       fill="none"
+      onClick={click}
     >
       <title>LinkedIn</title>
       {realColor ? (

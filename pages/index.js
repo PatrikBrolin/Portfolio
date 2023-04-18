@@ -16,6 +16,7 @@ export default function Home({}) {
   const heroRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
+  const skillsRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -57,13 +58,14 @@ export default function Home({}) {
         projectsRef={projectsRef}
         contactRef={contactRef}
         heroRef={heroRef}
+        skillsRef={skillsRef}
       />
       <Hero contactRef={contactRef} heroRef={heroRef} />
 
       <div ref={projectsRef}>
         <Projects ref={projectsRef} isVisible={isVisible} />
       </div>
-      <Skills />
+      <Skills skillsRef={skillsRef} />
       {/* <About /> */}
       <Contact contactRef={contactRef} />
       <Links />
