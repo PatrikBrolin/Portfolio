@@ -23,7 +23,7 @@ import Section from "../layout/ui/section/section";
 import cn from "classnames";
 import { useState } from "react";
 
-export default function Skills({skillsRef}) {
+export default function Skills({ skillsRef }) {
   const [active, setActive] = useState(1);
   const [size, setSize] = useState(50);
   return (
@@ -60,30 +60,89 @@ export default function Skills({skillsRef}) {
         <div className={styles.sliderContainer}>
           {active === 1 ? (
             <div className={cn(active === 1 && styles.active)}>
-              <Html size={size} />
-              <Css size={size} />
-              <Javascript size={size} />
-              <Next size={size} />
-              <Sass size={size} />
-              <React size={size} />
-              <Bootstrap size={size} />
-              <Redux size={size} />
+              <div>
+                <Html size={size} />
+                <span>HTML</span>
+              </div>
+              <div>
+                <Css size={size} />
+                <span>CSS</span>
+              </div>
+              <div>
+                <Next size={size} />
+                <span>NextJs</span>
+              </div>
+              <div>
+                <Sass size={size} />
+                <span>Sass</span>
+              </div>
+              <div>
+                <React size={size} />
+                <span>React</span>
+              </div>
+              <div>
+                <Bootstrap size={size} />
+                <span>Bootstrap</span>
+              </div>
+              <div>
+                {" "}
+                <Redux size={size} />
+                <span>Redux</span>
+              </div>
+              <div>
+              <Wordpress size={size} />
+                <span>Wordpress</span>
+              </div>
+              <div>
+              <Strapi size={size} />
+                <span>Strapi</span>
+              </div>
             </div>
           ) : active === 2 ? (
             <div className={cn(active === 2 && styles.active)}>
-              <Node size={size} />
+               <div>
+               <Node size={size} />
+                <span>NodeJs</span>
+              </div>
+              <div>
               <Postman size={size} />
-              <Strapi size={size} />
+                <span>Postman</span>
+              </div>
+              
+              <div>
               <Mongo size={size} />
-              <Wordpress size={size} />
+                <span>MongoDB</span>
+              </div>
+             
+              
+            
+              
+              
+              
             </div>
           ) : active === 3 ? (
             <div className={cn(active === 3 && styles.active)}>
-              <Git size={size} />
+               <div>
+               <Git size={size} />
+                <span>Git</span>
+              </div>
+              <div>
               <Figma size={size} />
+                <span>Figma</span>
+              </div>
+              <div>
               <Trello size={size} />
+                <span>Trello</span>
+              </div>
+              <div>
               <VScode size={size} />
+                <span>VsCode</span>
+              </div>
+              <div>
               <Vercel size={size} />
+                <span>Vercel</span>
+              </div>
+             
             </div>
           ) : null}
         </div>
