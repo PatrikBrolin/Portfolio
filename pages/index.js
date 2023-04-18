@@ -1,9 +1,9 @@
 import Hero from "/components/hero/Hero";
-import Contact from "/components/Contact/Contact";
+import Contact from "/components/contact/Contact";
 import Header from "@/components/header/Header";
 import Container from "@/components/layout/ui/container/container";
 import Skills from "@/components/skills/Skills";
-import About from "@/components/about/about";
+
 import Links from "@/components/layout/ui/links/Links";
 
 import Projects from "@/components/projects/Projects";
